@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const cluster = require("cluster");
 const numCPUs = require("os").cpus().length;
-const api = require("./api/index");
+
 const isDev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 5000;
 
@@ -27,9 +27,10 @@ if (!isDev && cluster.isMaster) {
   app.use(express.static(path.resolve(__dirname, "../react-ui/build")));
 
   // Answer API requests.
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: false }));
-  app.use("/api", api);
+  app.get("/api", function (req, res) {
+    res.set("Content-Type", "application/json");
+    res.send('{"message":"Hello from the custom server!"}');
+  });
 
   // All remaining requests return the React app, so it can handle routing.
   app.get("*", function (request, response) {
