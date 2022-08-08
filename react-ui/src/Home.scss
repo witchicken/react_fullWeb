@@ -1,0 +1,21 @@
+.Home {
+  background-color: black;
+  text-align: center;
+  font-family: "Song Myung", serif;
+  color: rgba(1, 1, 1, 0.8);
+  height: 100vh;
+  .Home_inner {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 230, 240, 1);
+    h2 {
+      font-size: 40px;
+    }
+    height: 100%;
+  }
+}
+.residData_p {
+  display: inline-block;
+  color: blue;
+  font-size: 20px;
+}
