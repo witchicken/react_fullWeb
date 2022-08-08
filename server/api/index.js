@@ -3,16 +3,14 @@ const router = express.Router();
 const db = require("../mysql/db");
 router.post("/loadidcard", (req, res) => {
   const idData = req.body.idData;
-  console.log(idData);
+
   //db.connect();
   db.query(
     `select * from savedform where datenow="${idData}";`,
     (err, data) => {
       if (err) {
         res.send({ data: "에러가 발생했습니다." });
-        console.log(err);
       } else {
-        console.log("조회 성공");
         res.send({ data: data });
         //db.end();
       }
@@ -40,9 +38,7 @@ router.post("/marriageform", (req, res) => {
     (err, data) => {
       if (err) {
         res.send({ data: "에러가 발생했습니다." });
-        console.log(err);
       } else {
-        console.log("insert 성공");
         res.send({ data: formData.datenow });
         //db.end();
       }
