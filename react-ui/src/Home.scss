@@ -13,6 +13,12 @@
     }
     height: 100%;
   }
+  .Home_footer {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .residData_p {
   display: inline-block;
