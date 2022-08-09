@@ -32,6 +32,7 @@ function Home() {
       woman_account !== ""
     ) {
       setIsCheckedData(true);
+      alert("빈칸 체크 완료. 미리보기를 다시 눌러주세요.");
     } else {
       alert("위의 폼의 빈칸을 작성해주세요.");
     }
