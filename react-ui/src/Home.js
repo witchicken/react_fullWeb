@@ -80,7 +80,7 @@ function Home() {
   return (
     <div className="Home">
       <div className="Home_inner">
-        <h2>신청서 폼 수정테스트</h2>
+        <h2>신청서 폼</h2>
         <p>*은 필수로 입력해주세요.</p>
         <div>
           <div>

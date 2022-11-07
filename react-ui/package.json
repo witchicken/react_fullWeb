@@ -8,6 +8,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-three/drei": "^9.40.0",
+    "@react-three/fiber": "^8.9.1",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "http-proxy-middleware": "^2.0.6",
@@ -19,7 +21,8 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^2.1.8",
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "three": "^0.146.0"
   },
   "scripts": {
     "start": "react-scripts start",

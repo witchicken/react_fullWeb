@@ -15,8 +15,8 @@
     "react-ui/node_modules"
   ],
   "dependencies": {
-    "express": "^4.16.4",
     "axios": "^0.27.2",
+    "express": "^4.16.4",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.19"
   },
@@ -30,6 +30,5 @@
     "create-react-app",
     "react"
   ],
-  "license": "MIT",
-  "devDependencies": {}
+  "license": "MIT"
 }
