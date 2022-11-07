@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./css/Night.scss";
 import { ReactComponent as Man } from "../svg/man.svg";
 function Night() {

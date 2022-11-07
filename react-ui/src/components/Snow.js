@@ -1,3 +1,4 @@
+import React from "react";
 import "./css/Snow.scss";
 
 import { ReactComponent as Man } from "../svg/man.svg";

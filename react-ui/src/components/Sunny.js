@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./css/Sunny.scss";
 import { ReactComponent as Man } from "../svg/man.svg";
 import { ReactComponent as Sun } from "../svg/sun.svg";
