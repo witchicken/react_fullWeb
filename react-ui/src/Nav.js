@@ -6,6 +6,8 @@ function Nav() {
       NavTest
       <Link to="/">Home</Link>
       <Link to="/Home">form</Link>
+      <Link to="/rotatenav">rotatenav</Link>
+      <Link to="/threetest">threeTest</Link>
     </>
   );
 }
