@@ -1,0 +1,68 @@
+.SnowCompo {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  background-color: #656563;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .innerCircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: inherit;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    .santahead {
+      position: absolute;
+      top: 3%;
+      left: 37%;
+      z-index: 99;
+    }
+  }
+  .snowContainer {
+    position: absolute;
+    left: 0;
+    top: -10%;
+    .snowflake {
+      position: fixed;
+      color: #fff;
+      font-size: 20px;
+      animation-name: snowflakes_fall, snowflakes_shake;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running;
+      z-index: 60;
+    }
+    @for $i from 1 through 100 {
+      .snowflake:nth-child(#{$i}) {
+        left: $i * 52 + random() * 50 + px;
+        animation-delay: random() * 10s, random() * 10s;
+        animation-duration: 3 + random() * 5s, 3 + random() * 5s;
+      }
+    }
+  }
+}
+
+@keyframes snowflakes_fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes_shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

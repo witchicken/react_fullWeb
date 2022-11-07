@@ -1,0 +1,126 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  margin: 0;
+  padding: 0;
+  @include center();
+  height: 100vh;
+  background-color: #cccccc;
+  .nav {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.4s;
+    transform: rotate(-40deg);
+    .partial {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: 0;
+      left: 0;
+      background-color: coral;
+      span {
+        font-size: 25px;
+        position: absolute;
+        color: #3a7575;
+        background: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 1),
+          rgba(255, 0, 180, 1),
+          rgba(0, 100, 200, 1)
+        );
+        background-size: 0 3px;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s;
+        &:hover {
+          background-size: 100% 3px;
+        }
+      }
+    }
+    .snow {
+      clip-path: polygon(50% 0%, 50% 50%, 100% 38%, 100% 0%);
+      transition: background-color 0.4s;
+      &:hover {
+        background-color: white;
+      }
+      span {
+        top: 15%;
+        left: 65%;
+        transform: rotate(40deg);
+      }
+    }
+    .rain {
+      clip-path: polygon(100% 38%, 50% 50%, 82% 100%, 100% 100%);
+      transition: background-color 0.4s;
+      &:hover {
+        background-color: #c4d3df;
+      }
+      span {
+        top: 58%;
+        left: 79%;
+        transform: rotate(113deg);
+      }
+    }
+    .sunny {
+      clip-path: polygon(82% 100%, 50% 50%, 18% 100%);
+      transition: background-color 0.4s;
+      &:hover {
+        background-color: #fce570;
+      }
+      span {
+        top: 83%;
+        left: 39%;
+        transform: rotate(180deg);
+      }
+    }
+    .night {
+      clip-path: polygon(18% 100%, 50% 50%, 0% 38%, 0% 100%);
+      transition: background-color 0.4s;
+      &:hover {
+        background-color: #041a40;
+      }
+      span {
+        top: 58%;
+        left: 5%;
+        transform: rotate(249deg);
+      }
+    }
+    .typhoon {
+      clip-path: polygon(0% 38%, 50% 50%, 50% 0%, 0% 0%);
+      transition: background-color 0.4s;
+      &:hover {
+        background-color: #004f63;
+      }
+      span {
+        top: 16%;
+        left: 11%;
+        transform: rotate(320deg);
+      }
+    }
+  }
+  .nav_active {
+    span {
+      background: linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+      );
+      background-size: 100% 3px !important;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 1.5s !important;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.TyphoonCompo {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .innerCircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: inherit;
+    z-index: 999;
+  }
+}

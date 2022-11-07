@@ -1,0 +1,79 @@
+.RainCompo {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  background-color: #203838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .innerCircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: inherit;
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+  .rainContainer {
+    position: absolute;
+    left: 0;
+    top: -20%;
+    //top: 0%;
+    .rainflake {
+      position: fixed;
+      animation-name: rainflakes_fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      z-index: 60;
+
+      background-color: #c4d3df;
+      clip-path: polygon(50% 0%, 0% 110%, 100% 110%);
+      transform: rotate(10deg);
+      overflow: visible;
+      transform-origin: 50% 100%;
+    }
+    .rainflake:after {
+      content: "";
+      position: absolute;
+      bottom: -1.5px;
+      width: 3px;
+      height: 3px;
+      background-color: #c4d3df;
+      border-radius: 50%;
+    }
+    @for $i from 1 through 200 {
+      .rainflake:nth-child(#{$i}) {
+        width: 3px;
+        //height: 30 + random() * 100 + px;
+        height: 60px;
+
+        left: $i * 12 + random() * 50 + px;
+        animation-delay: random() * 10s;
+        animation-duration: 0.9 + random() * 5s;
+      }
+    }
+  }
+}
+
+@keyframes rainflakes_fall {
+  0% {
+    top: -10%;
+    transform: translateX(0px) rotate(10deg) scaleX(1) scaleY(1);
+  }
+  50% {
+    top: 50%;
+    transform: translateX(-100px) rotate(10deg) scaleX(1) scaleY(1);
+  }
+  90% {
+    top: 93%;
+    transform: translateX(-180px) rotate(10deg) scaleX(1) scaleY(1);
+  }
+  100% {
+    top: 93%;
+    transform: translateX(-200px) rotate(0deg) scaleX(3) scaleY(0);
+  }
+}
