@@ -2,7 +2,6 @@ import React from "react";
 
 import "./css/Rain.scss";
 import { ReactComponent as ManWithUmbrella } from "../svg/manWithUmbrella.svg";
-import { useRef } from "react";
 
 function Rain() {
   return (
