@@ -2,7 +2,7 @@
   height: 100vh;
   position: absolute;
   width: 100%;
-  background-color: azure;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,14 +11,17 @@
     height: 150px;
     border-radius: 50%;
     background-color: inherit;
-    z-index: 999;
+    z-index: 12;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .test {
+  .solarsystem {
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 7;
   }
 }

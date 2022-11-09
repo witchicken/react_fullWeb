@@ -47,10 +47,10 @@ function Rotatenav() {
       case "sunny":
         setNowView(3);
         break;
-      case "night":
+      case "space":
         setNowView(4);
         break;
-      case "typhoon":
+      case "3D":
         setNowView(5);
         break;
       default:
@@ -81,10 +81,10 @@ function Rotatenav() {
           <span>sunny</span>
         </div>
         <div className="partial night">
-          <span>night</span>
+          <span>space</span>
         </div>
         <div className="partial typhoon">
-          <span>typhoon</span>
+          <span>3D</span>
         </div>
       </nav>
 
