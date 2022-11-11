@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 import "./css/Night.scss";
-import { ReactComponent as Man } from "../svg/man.svg";
 
 import { Scene, Sun } from "./threeCompo/Scene.js";
 
